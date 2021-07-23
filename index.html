@@ -1,0 +1,1323 @@
+
+<!DOCTYPE html><html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+  
+    <style id="styleElement">
+      * {
+      box-sizing: border-box;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik',sans-serif !important;
+  }
+      
+.exit-intent-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: rgba(33, 33, 33, 0.8);
+    transform: translateY(60%) scale(0);
+  	transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+      
+.exit-intent-popup.visible {
+	transform: translateY(0) scale(1);
+}
+      
+.newsletter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+  .centered { float: none; margin-left: 0; margin-right: 0; }
+  
+  h1 {
+      padding: 10px;
+      font-size: 40px;
+      line-height: 52px;
+      text-align: center;
+      font-weight: 400;
+  }
+  
+  h2 {
+      padding: 10px;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+      font-weight: 400;
+  }
+  
+  #bannerimage {
+      width: 100%;
+      height: auto;
+  }
+  
+  .gspace {
+      padding: 0px 20% 0px 20%;
+  }
+  
+  .gtext {
+      font-size: 22px;
+      line-height: 34px;
+      font-weight: 400;
+      color: rgb(33, 37, 41);
+      text-align: left;
+    	padding: 15px 30px 15px 30px;
+      overflow: hidden;
+    	margin-bottom: 0 !important;
+  }
+  
+  .redheading {
+      padding: 10px;
+      font-size: 30px;
+      color: #ff0000 !important;
+      font-weight: 700;
+      text-align: center;
+  }
+  .yellowheading {
+      font-size: 32px;
+      color: #fef742 !important;
+      background-color: #35467b;
+      font-weight: 600;
+      padding: 10px 10px 10px 10px;
+      margin: 0;
+      text-align: center;
+  }
+  
+  .whitegraygradient {
+      background: linear-gradient(
+          0deg, 
+          rgba(235, 238, 241, 1) 0%, 
+          rgba(235, 238, 241, 1) 50%, 
+          rgba(255, 255, 255, 1) 50%, 
+          rgba(255, 255, 255, 1) 100%);
+  }
+      .pastorgradient {
+      background: linear-gradient(
+          180deg, 
+          rgba(235, 238, 241, 1) 0%, 
+          rgba(235, 238, 241, 1) 74%, 
+          rgba(255, 255, 255, 1) 74%, 
+          rgba(255, 255, 255, 1) 100%);
+  }
+  .whitebluegradient {
+      background: linear-gradient(
+          0deg, 
+          rgba(242, 248, 254, 1) 0%, 
+          rgba(242, 248, 254, 1) 50%, 
+          rgba(255, 255, 255, 1) 50%, 
+          rgba(255, 255, 255, 1) 100%);
+  }
+  .bluewhitegradient {
+      background: linear-gradient(
+          180deg, 
+          rgba(242, 248, 254, 1) 0%, 
+          rgba(242, 248, 254, 1) 50%, 
+          rgba(255, 255, 255, 1) 50%, 
+          rgba(255, 255, 255, 1) 100%);
+  }
+  
+  .graybluegradient {
+      background: linear-gradient(
+          180deg, 
+          rgba(235, 238, 241, 1) 0%, 
+          rgba(235, 238, 241, 1) 50%, 
+          rgba(242, 248, 254, 1) 50%, 
+          rgba(242, 248, 254, 1) 100%);
+  }
+  
+  .graybg {
+      background-color: rgba(235, 238, 241, 1);
+  }
+  
+  .bluebg {
+      background-color: rgba(242, 248, 254, 1);
+  }
+  #dbbg {
+      background-color: rgba(35, 48, 90, 1) !important;
+  }
+  
+  .boxshadow1 {
+      background-color: #ffffff;
+      box-shadow: 0 0 12px 10px rgba(0, 0, 0, 0.06);
+    	margin-bottom: 50px;
+  }
+  
+  #adamintro {
+    	padding: 30px 30px 0px 30px;
+      font-size: 36px;
+      color: #23305a !important;
+      font-weight: 600;
+  }
+      
+  #img-pastor-intro {
+    margin-top: -60px;
+  	position: relative;
+    bottom: -80px;
+  }
+  
+  #img-2-bar {
+      width: 100%;
+      height: auto;
+  }
+  
+  #img-4-bar {
+      width: 100% !important;
+      height: auto;
+      padding: 0;
+      margin: 0;
+  }
+  
+  #quotesymbol {
+      color: black !important;
+      width: 30px !important;
+      height: auto;
+      margin-top: -20px;
+      padding-left: 1px;
+      margin-left: 10px;
+  }
+  
+  .quotebox {
+      background-color: #f9f9f9;
+      border: 2px solid #b3bec9;
+      border-radius: 10px;
+  }
+  
+  #grayboxlist {
+      color: #dbdbdb;
+      font-size: 22px;
+      line-height: 50px;
+      font-weight: 400;
+      text-align: left;
+  }
+  
+  #kannaimage {
+      margin-top: -50px;
+      margin-bottom: 10px;
+      width: 100%;
+      height: auto;
+  }
+  
+  .bluebold {
+      font-weight: bold;
+      color: #23305a;
+  }
+  
+  .graybox {
+      border: 3px solid #ccd5de;
+      border-radius: 10px;
+      padding-top: 20px;
+  }
+  
+  .ingredienttop {
+      padding: 15px 0px 0px 0px;
+      background-color: #1ea7f6;
+      border: 10px 10px 0px 0px;
+  }
+  
+  .qs {
+      color: #ff4b4b;
+  }
+  
+  .referencetext {
+      padding: 30px 10px 30px 10px;
+      word-wrap: break-word;
+      font-size: 12px;
+  }
+  
+  .buybutton {
+    position: relative;
+    bottom: 14%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+    border: none;
+    padding: 0;
+}
+
+.buybutton6 {
+	  position: relative;
+    bottom: 17.33%;
+    left: 10%;
+    width: 80%;
+    height: auto;
+    border: none;
+    padding: 0;
+}
+
+.buybuttonimage {
+    width: 100%;
+    height: auto;
+}
+    
+.buyshadow {
+  box-shadow: 0 0 16px 20px #1ea7f699;
+  border-radius: 20px;
+  margin-top: -35px;
+}
+  
+  .img-fluid2 {
+      width: 100%;
+      height: auto;
+  }
+      
+#buyoptions {
+	padding-top: 20px;
+}
+  
+  /* MEDIA STARTS BELOW */
+  
+  /* 1366px */
+  @media screen and (max-width: 1366px) {
+      .gspace {
+          padding: 0px 10% 0px 10%;
+      }
+  }
+  
+  /* 992px */
+  @media screen and (min-width: 992px) {
+      #img-1-jean-mobile {
+          display: none !important;
+      }
+      #img-3-prayer-mobile {
+          display: none !important;
+      }
+      #img-7-pt-mobile {
+          display: none !important;
+      }
+      #img-9-blood-mobile {
+          display: none !important;
+      }
+      #img-12-nano-mobile {
+          display: none !important;
+      }
+      #img-14-logo-mobile {
+          display: none !important;
+      }
+      #img-16-family-mobile {
+          display: none !important;
+      }
+      #img-18-questions-mobile {
+          display: none !important;
+      }
+      #img-19-ansmile-mobile {
+          display: none !important;
+      }
+      #img-21-beachlady-mobile {
+          display: none !important;
+      }
+  }
+  @media screen and (max-width: 992px) {
+      #img-1-jean {
+          display: none !important;
+      }
+      #img-3-prayer {
+          display: none !important;
+      }
+      #img-7-pt {
+          display: none !important;
+      }
+      #img-9-blood {
+          display: none !important;
+      }
+      #img-12-nano {
+          display: none !important;
+      }
+      #img-14-logo {
+          display: none !important;
+      }
+      #img-16-family {
+          display: none !important;
+      }
+      #img-18-questions {
+          display: none !important;
+      }
+      #img-19-ansmile {
+          display: none !important;
+      }
+      #img-21-beachlady{
+          display: none !important;
+      }
+      .gspace {
+          padding: 0px 5% 0px 5%;
+      }
+      .img-fluid2 {
+          width: 70%;
+          height: auto;
+      }
+    #adamintro {
+        font-size: 36px;
+        text-align: center;
+        color: #23305a !important;
+        font-weight: 800;
+      }
+
+      #img-pastor-intro {
+        margin-top: 15px;
+        position: static;
+        padding-bottom: 30px;
+      }
+  }
+  
+  /* 768px */
+  @media screen and (max-width: 768px) {
+      #bannerimage {
+          content: url(/res/mobile/Mobile4.jpg) !important;
+      }
+      .gspace {
+          padding: 0px 2% 0px 2%;
+      }
+    
+      #img-pastorintro {
+				content: url(/res/global/introm_pastoradam2.png) !important;
+      }
+    .pastorgradient {
+      background: linear-gradient(
+          180deg, 
+          rgba(235, 238, 241, 1) 0%, 
+          rgba(235, 238, 241, 1) 92.25%, 
+          rgba(255, 255, 255, 1) 92.25%, 
+          rgba(255, 255, 255, 1) 100%);
+  }
+      #img-2-bar {
+          content: url(/res/bars/m2_bar.png) !important;
+      }
+      #img-4-bar {
+          content: url(/res/bars/m4_bar.png) !important;
+      }
+      #thumbboxes1 {
+          content: url(/res/thumbboxes/m1.png) !important;
+      }
+      #thumbboxes2 {
+          content: url(/res/thumbboxes/m2.png) !important;
+      }
+      #thumbboxes3 {
+          content: url(/res/thumbboxes/m3.png) !important;
+      }
+      #thumbboxes4 {
+          content: url(/res/thumbboxes/m4.png) !important;
+      }
+      #biblequote {
+          content: url(/res/mobile/m7_quote.png) !important;
+      }
+      #kannaimage {
+          content: url(/res/m7_bar.png) !important;
+          margin-top: 20px;
+          margin-bottom: 20px;
+      }
+      #img-8-bar {
+          content: url(/res/bars/m8_kannabenefit.png) !important;
+      }
+      #img-9-bar {
+          content: url(/res/m9_bar.png) !important;
+      }
+      #img-11-curcumin {
+          content: url(/res/m11_curcumin.png) !important;
+      }
+      #img-12-bar {
+          content: url(/res/m12_bar.png) !important;
+      }
+      #img-14-bb {
+          content: url(/res/m14_bb.png) !important;
+      }
+      #img-17-ingred1{
+          content: url(/res/m17_ingred1.png) !important;
+      }
+      #img-17-ingred2{
+          content: url(/res/m17_ingred2.png) !important;
+      }
+      #img-17-bar {
+          content: url(/res/bars/m17_bar.png) !important;
+      }
+      #img-21-mbg {
+          content: url(/res/m21_mbg.png) !important;
+      }
+      #img-21-mbg2 {
+          content: url(/res/m21_mbg.png) !important;
+      }
+      .gtext {
+          font-size: 26px;
+          line-height: 1.8;
+      }
+      
+    .img-fluid2 {
+          width: 90%;
+          height: auto;
+      }
+    
+    	#buy1bottledesktop {
+       	display: none !important;
+    	}
+    #buyoptions {
+     margin: 20px 10%; 
+    }
+  }
+  @media screen and (min-width: 768px) {
+   	#buy1bottlemobile {
+        display: none !important;
+    }
+  }
+    </style>
+  
+  <title>Anointed Nutrition Smile</title>
+                <meta property="og:url" name="url" content="https://smile.anointednutrition.com/">          
+    <script>
+      window.__app = {
+        visit_id: undefined,
+        query: Object.freeze(window.location.search.substr(1).split(/&+/).reduce(function(map,c) {
+          var a = c.match(/([^=]+)=(.*)/) || []
+          if (a[1]) {
+            map[a[1]] = a[2]
+          }
+          return map
+        }, {})),
+        cookies: Object.freeze(document.cookie.split(/;\s+/).reduce(function(map,c) {
+          var a = c.match(/([^=]+)=(.*)/) || []
+          if (a[1]) {
+            map[a[1]] = a[2]
+          }
+          return map
+        }, {})),
+      }
+    </script>
+  
+        <script defer async>
+          (function(script) {
+            script.src = "//" + location.hostname
+              + "/api/visits?page_id=6&page_version=a&request_id=C7B8932F%3A8A60_A2DB8C0E%3A01BB_60FB4D6A_55301%3A3A6A9"
+              + "&querystring=" + encodeURIComponent(window.location.search.substr(1))
+              + "&fbclid=" + encodeURIComponent(__app.query.fbclid || "")
+              + "&fbp=" + encodeURIComponent(__app.cookies._fbp || "")
+              + "&fbc=" + encodeURIComponent(__app.cookies._fbc || "")
+              + "&referrer=" + encodeURIComponent(document.referrer);
+            document.head.appendChild(script);
+          })(document.createElement("script"));
+        </script>
+      
+        <script defer async>
+          !function(f,b,e,v,n,t,s)
+          {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+          n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+          if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+          n.queue=[];t=b.createElement(e);t.async=!0;
+          t.src=v;s=b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t,s)}(window, document,'script',
+          'https://connect.facebook.net/en_US/fbevents.js');
+          
+    fbq("init", "776128275846630");
+    fbq("trackSingle", "776128275846630", "PageView");
+  
+        </script>
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script><link href="/css/jquery-ui.css" rel="stylesheet"><script src="/js/jquery-ui.min.js"></script><link href="/css/bootstrap.min.css" rel="stylesheet"><script async="" src="/js/bootstrap.min.js"></script><script src="https://kit.fontawesome.com/e87bf0d42a.js"></script><link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"><script src="https://cbtb.clickbank.net/?vendor=anointed83"></script><script defer async>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-199095587-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+      <!-- Google Tag Manager -->
+      <script defer async>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NZGMVC');
+      </script>
+      <!-- End Google Tag Manager -->
+    <script type='text/javascript'>
+    window.__lo_site_id = 296634;
+    
+    	(function() {
+    		var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+    		wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+    		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+    	  })();
+    	</script></head>
+  
+  <body class=" dom-pending">
+  <!--<div class="exit-intent-popup">
+    <div class="newsletter">
+        <b>Wait! Don't leave this page! 📬</b>
+        <p>Not wanting Smile now? We still offer an amazing free de-stressing guide!</p>
+        <input type="email" placeholder="Your email address" class="email" />
+        <button class="submit">Receive Guide</button>
+        <span class="close">x</span>
+    </div>
+</div>-->
+<div class="row">
+<div class="col-lg-12"><img id="bannerimage" src="/res/global/Desktop1.jpg" alt="bannerimage" /></div>
+</div>
+<div class="row gspace align-items-center">
+<div class="col-lg-4 col-md-12"><img id="img-1-jean" class="img-fluid2" src="/res/1_jean.png" alt="jean" /></div>
+<div class="col-lg-8 col-md-12">
+<p class="gtext"><b>&ldquo;Daddy, why is mommy so sad?&rdquo;</b><br /><br />There I was, frozen just outside my daughter&rsquo;s bedroom door.<br /><br />I had just been about to join my husband Seth in tucking her in for the night&hellip; <br /><br /><b>But her question to her daddy about me hit me like a gut punch, stopping me cold. </b><br /><br />I could hear the fear and worry in my daughter Mary&rsquo;s voice, and it ripped my heart in two.</p>
+<div id="img-1-jean-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/1_jean.png" alt="jean" /></div>
+</div>
+</div>
+<div class="row gspace mt-4 mb-4">
+<div class="col-12">
+<p class="redheading">Then, her next question I overheard really knocked the breath from me -</p>
+</div>
+</div>
+<div class="row gspace mt-4 whitegraygradient">
+<div class="col-12 boxshadow1 pl-0 pr-0">
+<p class="yellowheading">"If I pray really hard, do you think God will make her happy again?"</p>
+<div class="row pt-3 align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">Tears filled my eyes&hellip; because I&rsquo;ve been praying for the same thing night after night for the past several months.<br /><br />Yet there are still those mornings when I wake up staring at the ceiling, sadness sitting like a giant rock inside my chest.<br /><br />I don&rsquo;t want to feel this way.<br /><br /><b>In fact, I shouldn&rsquo;t feel this way! I have a wonderful husband, three beautiful children and a lovely home&hellip; </b><br /><br />But before where these things brought me such vivid joy, this sadness now feels like it&rsquo;s painting my world a dull gray&hellip;</p>
+</div>
+<div class="col-lg-4 col-md-12 pt-3 pb-4 pr-5">
+<div class="row justify-content-center"><img class="img-fluid2 centered" src="/res/1_jeancircle" alt="jeancircle" /></div>
+</div>
+</div>
+<p class="gtext pb-4">And now my blues are stealing my precious daughter&rsquo;s happiness.<br /><br /><b>I know this has to stop. </b> But I have no idea how to make that happen.</p>
+</div>
+</div>
+<div class="row gspace pastorgradient">
+	<div class="col-12">
+  	<img id="img-pastorintro" class="img-fluid2 mx-auto d-block" src="/res/global/intro_pastoradam2.png" alt="pastoradam" />
+  </div>
+</div>
+<div class="row gspace mt-3">
+<div class="col-12">
+<p class="gtext">As a licensed pastor, I&rsquo;ve heard many stories like Jean&rsquo;s&hellip; <br /><br />People who are struggling to find a way out of the darkness of stress and deep sadness&hellip; and who have become aware of how their pain is causing those they love to suffer, too. <br /><br />People who come to me tend to tell me their deepest, darkest secrets, looking for comfort and guidance. <br /><br />And I&rsquo;m usually able to offer it. <br /><br />But in the past year or so I&rsquo;ve noticed something.&nbsp; <br /><br />I don&rsquo;t know if it&rsquo;s because of the chaos brought on by politics&hellip; or the lockdowns that have forced us to separate from our loved ones for months at a time&hellip; <br /><br />But lately, more and more of my congregants have been struggling with increased levels of&nbsp;sadness and a loss of hope&hellip; <br /><br /><b>And since they&rsquo;ve been trying absolutely everything to relieve it &mdash; prayer, exercise, diet, and even more extreme treatments &mdash; but still something is missing&hellip; </b></p>
+</div>
+</div>
+<div class="row gspace">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">I was having a tough time advising them on what to do next.<br /><br />God has called me to help people, so I wasn&rsquo;t about to give up on them.<br /><br />And after a journey that took me from the workings of the divinely created human brain all the way to the cutting edge of God-gifted science&hellip;<br /><br /></p>
+</div>
+<div class="col-lg-4 col-md-12 mt-3">
+<div class="row justify-content-center"><img class="img-fluid2" src="/res/1_circles.png" alt="1circles" /></div>
+</div>
+</div>
+<div class="row gspace whitebluegradient">
+<div class="col-12"><img id="img-2-bar" src="/res/bars/2_bar.png" alt="2bar" /></div>
+</div>
+<div class="row gspace bluebg pt-2">
+<div class="col-12">
+<h1>A simple <b>10-second daily ritual</b> that helps in coping with those blue periods...</h1>
+<p class="gtext text-center mb-2">One that instead of relying on certain therapies that often bring with them high costs and not enough relief… uses a natural ingredient from the plains of South Africa…</p>
+<img src="/res/global/g_section_div.png" alt="divider" />
+<div class="row align-items-center pb-4">
+<div class="col-lg-8 col-md-12">
+<p class="gtext mt-4">One that tribesmen have used for thousands of years through every kind of grueling hardship&hellip; <br /><br />An easy practice that gives your brain and body exactly what they need to support a positive, healthy mood&hellip; <br /><br />And restores that joy and passion for all of life&rsquo;s rich, God-given gifts. <br /><br /><b> This powerful natural solution is available to anyone struggling with periodic sadness or low mood&hellip; </b><br /><br />No matter how old you are or what your life&rsquo;s circumstances are&hellip;</p>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="row justify-content-center"><img class="img-fluid2" src="/res/2_african.png" alt="africanlady" /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row gspace mt-5 align-items-center">
+<div class="col-12">
+<h1><b style="color: #23305a;">This "Cloud-Clearing" Solution can help you Too.</b></h1>
+</div>
+<div class="col-lg-8 col-md-12">
+<p class="gtext">My search for this solution began several months ago, when I was listening to Jean describe her recent struggles with what she called her &ldquo;personal black cloud.&rdquo; <br /><br />She had tears in her eyes as she told me about her daughter Mary&rsquo;s desperate question.</p>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="row justify-content-center"><img class="img-fluid2" src="/res/3-depression.png" alt="1circles" /></div>
+</div>
+</div>
+<div class="row gspace mt-5">
+<div class="col-12 graybg"><img id="quotesymbol" src="/res/3_quote.png" alt="quotesymbol" />
+<p class="gtext">&ldquo;I thought I was doing such a good job hiding it from her,&rdquo; Jean told me. <br /><br />&ldquo;Every morning I make sure to greet my children with a big smile and a hug&hellip; even on those days I have to swallow down that stone of sadness to do it.&rdquo; <br /><br />&ldquo;I push myself to feed them and teach them, play with them and pray with them.&rdquo; <br /><br />&ldquo;But even when the sun is at its brightest and my kids are at their happiest&hellip;&rdquo; <br /><br />&ldquo;There are times when my personal sadness is there, casting shadows over all the joy I see before me.&rdquo; <br /><br />&ldquo;I find myself bursting into tears at random moments, and I have to duck my head or race to the bathroom to make sure the children don&rsquo;t see.&rdquo; <br /><br />&ldquo;And there have been days when I go to sleep early and wake up late, dreading the moment I have to get out of bed.&rdquo; <br /><br />&ldquo;My husband has been at a loss. He wants to help me, but he doesn&rsquo;t know how.&rdquo; <br /><br />&ldquo;He does everything he can to support me, but I can tell how much anguish my sadness is causing him.&rdquo; <br /><br />A tear trickled down Jean&rsquo;s cheek. &ldquo;It makes absolutely no sense,&rdquo; she said. &ldquo;I have everything I ever wanted&hellip; everything I ever prayed for.&rdquo; <br /><br /></p>
+</div>
+</div>
+<div class="row gspace">
+<div class="col-lg-4 col-md-12 graybg"><img id="img-3-prayer" class="img-fluid2 pl-3" src="/res/3-prayer" alt="prayer" /></div>
+<div class="col-lg-8 col-md-12 graybg pb-2">
+<p class="gtext">&ldquo;Why am I so miserable lately?&rdquo; <br /><br />I gently asked Jean if she had seen a doctor about this. 
+  <br /><br />&ldquo;Yes,&rdquo; she said. &ldquo;She sent me to a counselor, and they gave me the usual recommendations.&rdquo; 
+  <br /><br />&ldquo;But I had already tried these things and while they made me feel a little bit better, they couldn't help me escape the blue mood I sometimes get stuck in.&rdquo;
+  </p>
+  
+<div id="img-3-prayer-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/3-prayer" alt="prayer" /></div>
+</div>
+  <div class="col-12 graybg">
+<p class="gtext">Jean started to cry. &ldquo;Pastor Adam, I&rsquo;ve tried everything,&rdquo; she sobbed. &ldquo;I exercise. I eat a healthy diet. I&rsquo;m outside with my kids all the time, so I get plenty of sunshine. And I pray faithfully.&rdquo; 
+  <br /><br />&ldquo;I don&rsquo;t know what else I can do.&rdquo;</p>
+</div>
+</div>
+
+<div class="row gspace whitebluegradient">
+<div class="col-12 graybluegradient"><img id="img-4-bar" src="/res/bars/4_bar.png" alt="4bar" /></div>
+</div>
+<div class="row gspace bluebg pt-3">
+<div class="col-12">
+<p class="gtext pl-1">Jean&rsquo;s pain touched my heart. I wanted to tell her it was going to be okay, and that I would pray for her, but I knew how hollow those words might seem. <br /><br />So instead I said &mdash;</p>
+</div>
+<div class="row">
+<div class="col-lg-8 col-md-12">
+<div class="quotebox m-4 pt-3">
+<p class="gtext">&ldquo;Jean, I&rsquo;m going to do whatever I can to help you.&rdquo; <br /><br />&ldquo;It may take some time, but I&rsquo;m going to find an answer.&rdquo;</p>
+</div>
+<p class="gtext">That seemed to comfort Jean. She wiped her eyes and thanked me, and promised she would keep praying and doing her best to hold on for her family. <br /><br />The very next day, I decided it was time for me to do my own research to see if I could come up with a solution. <br /><br />As I mentioned earlier, Jean wasn&rsquo;t the only person I talked to who was having a problem with periods of low mood these days.</p>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="row justify-content-center"><img class="img-fluid2" src="/res/4_thinkyadam" alt="adam" /></div>
+</div>
+</div>
+</div>
+<div class="row gspace bluewhitegradient">
+<div class="col-12 p-4" style="background-color: #333333;">
+<p class="gtext" style="color: #dbdbdb;">And while their life circumstances were different, there were a few things the stories I heard from these congregants had in common.</p>
+<ul id="grayboxlist">
+<li>Sarah told me she had been crying more often lately, and often couldn&rsquo;t even pinpoint the reason&hellip;</li>
+<li>Jason said he had been sleeping a lot more than usual and had trouble getting out of bed some mornings&hellip;</li>
+<li>Jessica shared with me that these days she often felt useless and worthless&hellip;</li>
+<li>And Edgar had lost interest in things that used to make him happy and fulfilled&hellip;</li>
+<li>And all of them told me they were starting to lose hope of things going back to normal for them.</li>
+</ul>
+</div>
+</div>
+<div class="row gspace align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext"><br /><br />Can you relate to any of these? <br /><br />If so, don&rsquo;t beat yourself up&hellip; <br /><br />Because the truth is, modern life can be hard and stressful. <br /><br />We&rsquo;re all juggling a million things&hellip; our jobs&hellip; managing and maintaining our homes and cars&hellip; caring for our spouses and children&hellip; volunteering for charities and church duties&hellip; <br /><br />And with the current state of the world, we&rsquo;re doing almost all of these things at home rather than at our church, office, or school. Having the whole family at home 24 hours a day, 7 days a week for months at a time can be frustrating and exhausting. <br /><br />We face all kinds of physical, mental, and spiritual challenges in our day-to-day lives&hellip;</p>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="row justify-content-center"><img class="img-fluid2" src="/res/4_circles3.png" alt="4circles" /></div>
+</div>
+</div>
+<div class="row gspace mt-3 pb-3">
+<div class="col-12">
+<p class="gtext">It&rsquo;s no wonder there are times we have trouble keeping our spirits up. <br /><br />But most people are able to bounce back quickly. <br /><br />They have a rough moment or bad day&hellip; then they say a prayer and go to sleep. And the next day, their mood rebounds and they&rsquo;re back on track. <br /><br />That certainly wasn&rsquo;t happening with Jean and the others who had come to me for advice.</p>
+</div>
+</div>
+<div class="row gspace bluebg">
+<div class="col-12 pt-4 pb-1">
+<p class="gtext"><b>They weren&rsquo;t suffering from the usual off day or bad mood.</b> <br /><br /><b>Their periods of sadness were dragging on for weeks&hellip; even months&hellip; throwing their daily routines out of whack and disrupting their lives.</b> <br /><br /><b>And this didn&rsquo;t appear to be something they could just fix with positive thinking or a plucky attitude (though they certainly had tried).</b> <br /><br /><b>They needed some added, effective support to regain that positive, healthy mood that was now eluding them.</b><br/><br/><b>Now I knew Jean and the others had already tried some things to help with their occasional low mood&hellip; so I read up on them.</b></p>
+</div>
+</div>
+<div class="row gspace">
+<div class="col-12 "><img id="thumbboxes1" class="img-fluid2 mt-4 mb-2 mx-auto d-block" src="/res/thumbboxes/1.png" alt="thumbboxes1" /> <img id="thumbboxes2" class="img-fluid2 mt-2 mb-2 mx-auto d-block" src="/res/thumbboxes/2.png" alt="thumbboxes2" /> <img id="thumbboxes3" class="img-fluid2 mt-2 mb-2 mx-auto d-block" src="/res/thumbboxes/3.png" alt="thumbboxes3" /> <img id="thumbboxes4" class="img-fluid2 mt-2 mb-2 mx-auto d-block" src="/res/thumbboxes/4.png" alt="thumbboxes4" /></div>
+</div>
+<div class="row gspace mt-3">
+<div class="col-12">
+<p class="gtext"><b>They didn&rsquo;t want to talk&hellip; they wanted answers.</b> <br /><br />It seemed clear that Jean and the others needed support beyond these methods. <br /><br />Now it was time to find some options they hadn&rsquo;t tried. <br /><br />To do that, I turned to God&rsquo;s miraculous world of nature.</p>
+</div>
+</div>
+<div class="row gspace whitebluegradient">
+<div class="col-12"><img id="biblequote" class="mx-auto d-block" src="/res/bars/7_quotechrist.png" alt="biblequote" /></div>
+</div>
+<div class="row gspace pt-5 pb-5 bluebg">
+<div class="col-12">
+<p class="gtext">I had some experience with natural remedies, and I knew there were tons of nutrients from plants and tiny creatures that could help provide healing nourishment to the body. <br /><br />Surely there had to be at least one that could help my congregants with their troubles. <br /><br />It took a lot of digging and a whole bunch of reading, but eventually I came across this fascinating little plant from South Africa&hellip; <br /><br />Its scientific name is <b>Sceletium tortuosum&hellip;</b></p>
+<img id="kannaimage" class="mx-auto d-block" src="/res/7_bar.png" alt="kannaimage" />
+<p class="gtext"><b>Kanna</b> has been used in traditional medicine by South African tribesmen for thousands of years. <br /><br />They would gather and dry the roots and stems of the plant, then chew them to gain its effects. <br /><br />Whenever the tribe&rsquo;s hunters and shepherds went on long journeys in dry areas, they would use <b>kanna</b> to quell their hunger and thirst. They also discovered it helped boost their energy and vitality.</p>
+</div>
+</div>
+<div class="row gspace pt-4 pb-4">
+<div class="col-12">
+<h1>Most importantly, the tribesmen also used it as a mood booster and balancer.</h1>
+<p class="gtext text-center mb-2">In fact, a 17th century Dutch explorer who met these tribesmen said they &ldquo;were of a very cheerful nature&rdquo; and attributed it to their consumption of kanna. <sup>2</sup></p>
+<img src="/res/global/g_section_div.png" alt="divider" class="img-fluid2" />
+<div class="row align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">And many South Africans still use <b>kanna </b>today to balance their moods and promote a sense of well-being. <br /><br />I knew I was on the right track, so I started to take a closer look at this unique plant&hellip; <br /><br />And what I found was astonishing. <br /><br />It turns out that <b>kanna</b> supports a positive, healthy mood&hellip; and can also help relieve those anxious moments often experienced by those with periodic bouts of the blues.</p>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="row justify-content-center"><img class="img-fluid2" src="/res/7_africanblue.png" alt="africanlady" /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row gspace align-items-center">
+<div class="col-lg-4 col-md-12"><img id="img-7-pt" class="img-fluid2" src="/res/7-pt.png" alt="pt" /></div>
+<div class="col-lg-8 col-md-12">
+<p class="gtext">In one double-blind, placebo-controlled clinical study &mdash; the gold standard of studies &mdash; some healthy individuals were given kanna after taking a stress-inducing test. Their brains were scanned before and after the test. <br /><br />The scans of those who were given kanna showed a decrease in activity related to anxiety. And several participants reported feeling more calm, alert and confident after taking the kanna. <sup>4</sup> <br /><br />In another double-blind, placebo-controlled study, healthy participants taking kanna experienced reduced physical and psychological signs of stress and anxiety when they took a simulated public speaking test. <sup>5</sup></p>
+<div id="img-7-pt-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/7-pt.png" alt="pt" /></div>
+</div>
+</div>
+<div class="row gspace whitebluegradient mt-3 mb-0">
+<div class="col-12"><img id="img-8-bar" class="img-fluid2 mx-auto d-block" src="/res/bars/8_kannabenefit.png" alt="3 benefits" /></div>
+</div>
+<div class="row gspace bluebg pt-5">
+    <div class="row align-items-center">
+        <div class="col-lg-7 col-md-12">
+            <p class="gtext pb-0">At this point, I was really excited. Could this be the natural, God-given answer I had
+                been searching for? <br /><br /> To get some confirmation, I consulted with my old friend Mark, who I
+                knew was one of the premier experts in natural ingredients and even makes ultra high-quality supplements
+                that most people have access to. </p>
+        </div>
+        <div class="col-lg-5 col-md-12">
+            <div class="row justify-content-center">
+              <img class="img-fluid2 mx-auto d-block pr-3" src="/res/markadam.JPG"
+                    alt="mark" />
+          </div>
+        </div>
+        <div class="col-12">
+            <div class="gtext pt-0">
+                I thought he could help me figure out if kanna was the answer to my congregants&rsquo; prayers. I told
+                him
+                what I knew about kanna and asked if he thought it was something that could support them. Mark was
+                silent
+                for a minute. Then he said &mdash;<br /><br />
+                <div class="quotebox m-3">
+                    <p class="gtext">&ldquo;I&rsquo;m going to be completely honest with you, Adam.&rdquo;
+                        <br /><br />&ldquo;There&rsquo;s no doubt that <b>kanna</b> is a powerful ingredient. And it may
+                        have even helped a few people with issues like Jean&rsquo;s.&rdquo;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row gspace bluewhitegradient mb-0 pt-5">
+<div class="col-12"><img id="img-9-bar" class="img-fluid2 mx-auto d-block" src="/res/9_bar.png" alt="9bar" /></div>
+</div>
+<div class="row gspace mt-3">
+<div class="col-12">
+<p class="gtext">I was stunned. The studies I had read all seemed so promising! <br /><br />But Mark told me it wasn&rsquo;t the kanna in those supplements that was the problem&hellip; <br /><br />It was how the kanna was being delivered to the body. <br /><br />And that traditionally, the tribal members chewed it, which activated the alkaloids and allowed it to be used by the body&hellip;</p>
+<h1 class="pt-3 pb-3">He then shared with me a scientific breakthrough that he said is going to transform the natural supplement industry forever.</h1>
+<p class="gtext">Mark explained that most <b>kanna </b>supplements &mdash; in fact, most supplements of any kind &mdash; are pretty much worthless because of something called <b>bioavailability </b>.</p>
+</div>
+</div>
+<div class="row gspace align-items-center">
+<div class="col-lg-4 col-md-12"><img id="img-9-blood" class="img-fluid2" src="/res/9_blood" alt="blood" /></div>
+<div class="col-lg-8 col-md-12">
+<p class="gtext pb-4">Bioavailability refers to how much of a nutrient reaches the bloodstream, where it is then absorbed by the body&rsquo;s cells. <br /><br />If a nutrient can&rsquo;t reach the bloodstream, it&rsquo;s of no use to the body. <br /><br />Mark went on to say that if a drug or nutrient is given by IV, it&rsquo;s considered 100% bioavailable because it goes straight into the bloodstream.</p>
+<div id="img-9-blood-mobile"><br /><img class="img-fluid2 mx-auto d-block pb-4" src="/res/9_blood" alt="blood" /></div>
+</div>
+</div>
+<div class="row gspace pt-4 graybg">
+<div class="col-12">
+<h1>But if a drug or supplement is put into a tablet or capsule, its bioavailability is a lot lower.</h1>
+</div>
+</div>
+<div class="row gspace graybg">
+<div class="col-12">
+<div class="row align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext pb-4">That&rsquo;s because it has to pass through the stomach to get to your small intestine, where it&rsquo;s then picked up by the bloodstream and absorbed by the body. <br /><br />And in passing through the stomach, often much of the supplement is destroyed by stomach acid. <br /><br />So, when you&rsquo;re taking a supplement in a capsule, the bioavailability is already a lot less than 100%. <br /><br />But that&rsquo;s only half the problem.</p>
+</div>
+<div class="col-lg-4 col-md-12 pt-3 pb-4">
+<div class="row justify-content-center"><img class="img-fluid2 mx-auto d-block" src="/res/10_body.png" alt="body" /></div>
+</div>
+</div>
+</div>
+</div>
+<div class="row gspace pt-3">
+<div class="col-12">
+<h1><b style="color: #23305a;">Turns out, the body can&rsquo;t really absorb a lot of the ingredients in many supplements because they&rsquo;re too large to pass through the cellular wall.</b></h1>
+<img id="img-11-curcumin" class="img-fluid2 mx-auto d-block pt-3" src="/res/11_curcumin.png" alt="curcumin" />
+<p class="gtext pt-5">&ldquo;Getting curcumin into your cells is like trying to force a bowling ball through a pinhole. It&rsquo;s just not physically possible,&rdquo; Mark said.</p>
+</div>
+</div>
+<div class="row gspace">
+<div class="col-lg-8 col-md-12 pl-4">
+<p class="gtext">I was curious if the situation was the same with kanna. <br /><br />&ldquo;Not quite,&rdquo; Mark told me. <br /><br />He explained that kanna can be absorbed by the body&hellip; but only if you take it a certain way. You have to chew the dried stems and roots of the plant so that it mixes with your saliva to be activated, then swallow that liquid.</p>
+<div class="quotebox m-4 pt-3">
+<p class="gtext">&ldquo;Because <b>kanna</b> can only be made available to the body by mixing it with saliva, putting it into a capsule and swallowing it is a waste of time and money,&rdquo; <b>Mark</b> said.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-12 pt-4">
+<div class="row justify-content-center"><img class="img-fluid2" src="/res/11_pill.png" alt="pill" /></div>
+</div>
+</div>
+<div class="row gspace">
+<div class="col-12">
+<p class="gtext">I felt deflated. Who in the world was going to want to chew on a bunch of hard, dry roots and sticks? <br /><br />Was I going to have to go back to the drawing board again? <br /><br />This is where things got really interesting&hellip; <br /><br /><b>Mark</b> told me he had spent the last few years trying to solve the mystery of how to make the ingredients in natural supplements easier for the body to absorb. <br /><br />He looked at some different methods for increasing absorption, but none of them seemed to go far enough.</p>
+</div>
+</div>
+<div class="row gspace whitebluegradient mb-0 pt-5">
+<div class="col-12"><img id="img-12-bar" class="img-fluid2 mx-auto d-block" src="/res/12_bar.png" alt="12bar" /></div>
+</div>
+<div class="row gspace bluebg pt-3">
+<div class="col-12">
+<h1><b style="color: #23305a;">It's called nanotechnology.</b></h1>
+<p class="gtext pt-4"><b>Nanotechnology</b> (or &ldquo;nano&rdquo; for short) is the science of making things smaller. It&rsquo;s already been used for years in technology to make microchips smaller, and by manufacturers to make industrial paints and coatings stronger, more vivid, and longer-lasting.</p>
+</div>
+</div>
+<div class="row gspace bluebg align-items-center">
+<div class="col-lg-4 col-md-12"><img id="img-12-nano" class="img-fluid2 pl-3" src="/res/12_nano.png" alt="prayer" /></div>
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext">Now, this innovative scientist was applying nano to natural supplements. And the results were mind-boggling. <br /><br />Using nano, he was able to take a natural ingredient like <b>curcumin</b> and break it down into nanometer-sized particles. <br /><br />To give you an idea of the size of these nanoparticles, a human hair is about <b>80,000 nanometers wide.</b> <br /><br />Comparing a nanometer to a meter is like comparing the size of golf ball to the size of the Earth. <br /><br /><b>In short, Mark said, they are really, really small.</b></p>
+<div id="img-12-nano-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/12_nano.png" alt="prayer" /></div>
+</div>
+</div>
+<div class="row gspace bluebg pt-3">
+<div class="col-12">
+<h1>Small enough, in fact, to get into your cells.</h1>
+</div>
+</div>
+<div class="row gspace bluebg align-items-center">
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext"><b>Mark</b> explained that supplements made with nano &mdash; what he called &ldquo; <b>nanoceuticals</b> &rdquo; &mdash; can take a poorly absorbed nutrient and break in into tens of thousands of tiny nanoparticles&hellip; <br /><br />And, if taken in the right liquid form, a nanoceutical is able to fully penetrate your cells. <br /><br />So, when you use this new discovery with <b>kanna</b>&hellip;</p>
+</div>
+<div class="col-lg-4 col-md-12"><img id="img-12-wbc" class="img-fluid2 pl-3 mx-auto d-block" src="/res/12_wbc.png" alt="white blood cell" /></div>
+</div>
+<div class="row gspace pt-3">
+<div class="col-12">
+<h1><b style="color: #23305a;">It actually delivers better, faster-acting results.</b></h1>
+</div>
+<div class="row">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">I could see now why he was so excited about this. <br /><br />This truly was a unique health solution. <br /><br />But I was still a little confused.</p>
+<div class="quotebox m-4 pt-3">
+<p class="gtext">&ldquo;You say kanna can only be absorbed when the plant is chewed and mixed with saliva. How does nano change that?&rdquo; I asked Mark.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="row justify-content-center align-items-center"><img class="img-fluid2 mx-auto d-block" src="/res/13_circles.png" alt="13circles" /></div>
+</div>
+</div>
+</div>
+<div class="row gspace pt-3">
+<div class="row">
+<div class="col-12">
+<p class="gtext pt-4">He explained that <b>nanoceuticals</b> come in a liquid solution that&rsquo;s taken by mouth. <br /><br />So, if <b>kanna</b> is made available as a <b>nanoceutical</b>, you would take it by placing a few drops under your tongue, where it mixes with saliva, is swallowed and is absorbed into the body&hellip; <br /><br />Then, the active ingredient goes right into your bloodstream and is fed into your cells.</p>
+<h1>That&rsquo;s the magic of nano&hellip; it takes even the most difficult-to-absorb nutrients and makes them incredibly easy for the body to use.</h1>
+<p class="gtext pt-4 text-center mb-2">I thought for a minute about everything <b>Mark</b> had told me&hellip;</p>
+<img class="img-fluid2" src="/res/global/g_section_div.png" alt="divider" /></div>
+</div>
+</div>
+<div class="row gspace pt-3">
+<div class="row align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">And my heart swelled at the thought of how many people this discovery could help&hellip; <br /><br />People like Jean, who were occassionally struggling just to get out of bed every day&hellip; <br /><br />Who from time to time labored under a heavy load of sadness and pain&hellip; <br /><br />The idea that <b>nanoceuticals</b> could help lift that periodic load and restore their happiness and energy was like a beacon from Heaven shining down upon me&hellip; <br /><br />I felt like God was telling me what I should do next. <br /><br />I had to do whatever I could to help get these products into people&rsquo;s hands as quickly as possible. <br /><br />I wanted to give people like Jean the kind of health support they&rsquo;ve been praying for.</p>
+</div>
+<div class="col-lg-4 col-md-12">
+<div class="row justify-content-center"><img class="img-fluid2 mx-auto d-block" src="/res/13_jean.png" alt="13circles" /></div>
+</div>
+</div>
+</div>
+<div class="row gspace bluebg pt-3">
+<div class="row">
+<div class="col-12">
+<p class="gtext pt-3">That&rsquo;s why I started a company, one that I could trust and recommend to friends and family.. One that uses this breakthrough discovery to help as many people as possible&hellip;</p>
+</div>
+</div>
+</div>
+<div class="row gspace bluebg align-items-center">
+<div class="col-lg-4 col-md-12"><img id="img-14-logo" class="img-fluid2 pl-3" src="/res/14_an" alt="logo" /></div>
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext"><span class="bluebold">Anointed Nutrition</span>, a company dedicated to making nanoceuticals that help people support their God-given health and well-being. <br /><br />We knew from the start we were going to use a nano form of <b>kanna</b>, but he wanted <span class="bluebold">Anointed Nutrition's</span> formula to be the absolute best on the market&hellip;</p>
+<div id="img-14-logo-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/14_an" alt="logo" /></div>
+</div>
+</div>
+<div class="row gspace bluebg align-items-center">
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext">So we kept testing natural compounds to see which would enhance <b>kanna&rsquo;s</b> mood-maintaining effects even more. <br /><br />It took some trial and error, but we eventually narrowed the ingredients down to <b>kanna</b> and two more excellent stress busters and mood lifters&hellip; <br /><br />Then worked with the <b>MIT-mentored scientist</b> I mentioned earlier to convert each of those ingredients into its most powerful nano form&hellip; <br /><br />And combine them into the finished product that I&rsquo;m delighted to present to you today&hellip;</p>
+</div>
+<div class="col-lg-4 col-md-12"><img id="img-12-wbc" class="img-fluid2 pl-3 mx-auto d-block" src="/res/14_gc.png" alt="green chemicals" /></div>
+</div>
+<div class="row gspace bluewhitegradient mb-0 pt-5">
+<div class="col-12"><img id="img-14-bb" class="img-fluid2 mx-auto d-block" src="/res/14_bluebox.png" alt="14bb" /></div>
+</div>
+<div class="row gspace align-items-center">
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext">These ingredients are converted into nano form so you can fully absorb and use them to support a healthy response to stress&hellip; lift your mood and brighten your outlook&hellip; and finally free yourself from that occassional nagging <b>&ldquo;black cloud&rdquo;</b> hanging over your life. <br /><br />This solution is formulated and packaged in a liquid tincture you place under your tongue and swallow for quick and easy absorption. <br /><br />The tincture we use has no funky smell, texture, or taste&hellip; <br /><br />And it delivers the ingredients directly to your cells, bypassing the digestive system completely.</p>
+</div>
+<div class="col-lg-4 col-md-12"><img id="img-12-wbc" class="img-fluid2 pl-3 mx-auto d-block" src="/res/15_smile.png" alt="smile product" /></div>
+</div>
+<div class="row gspace">
+<div class="col-12">
+<p class="gtext"> tongue, you&rsquo;ll soon notice a difference. <br /><br /><i class="fas fa-check" style="color: #45ac2d;" aria-hidden="true"></i> First, you&rsquo;ll feel a sense of calm and lightness, like all your cares have been swept away&hellip; <br /><br /><i class="fas fa-check" style="color: #45ac2d;" aria-hidden="true"></i> Then, you&rsquo;ll notice that black cloud that&rsquo;s been following you around from time to time has started to lift. <br /><br /><i class="fas fa-check" style="color: #45ac2d;" aria-hidden="true"></i> Things will start to look brighter and clearer. <br /><br /><i class="fas fa-check" style="color: #45ac2d;" aria-hidden="true"></i> You&rsquo;ll find yourself jumping out of bed in the morning, eager to start your day. <br /><br /><i class="fas fa-check" style="color: #45ac2d;" aria-hidden="true"></i> Your daily chores will seem effortless. <br /><br /><i class="fas fa-check" style="color: #45ac2d;" aria-hidden="true"></i> You&rsquo;ll pick up old hobbies that had stopped giving you pleasure, and maybe even add a few new ones. <br /><br /><i class="fas fa-check" style="color: #45ac2d;" aria-hidden="true"></i> And your sadness will fade away, replaced by joy and zest for life.</p>
+</div>
+</div>
+<div class="row gspace align-items-center">
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext">The best part is when other people start to notice. <br /><br />It was that way for Jean. <br /><br />Within a few weeks of using Smile, Jean called me in tears&hellip; <br /><br />But this time they were tears of joy.</p>
+<div class="quotebox m-4 pt-3">
+<p class="gtext">&ldquo;I just had to tell you how grateful I am,&rdquo; she said.</p>
+</div>
+</div>
+<div class="col-lg-4 col-md-12"><img class="img-fluid2 pl-3 mx-auto d-block" src="/res/15_jeansmile.png" alt="jean smiling" /></div>
+</div>
+<div class="row gspace bluebg pt-3 mt-3">
+<div class="col-12">
+<h1><b style="color: #23305a; font-style: italic;">&ldquo;My black cloud is gone!&rdquo;</b></h1>
+</div>
+</div>
+<div class="row gspace bluebg align-items-center">
+<div class="col-lg-4 col-md-12"><img id="img-16-family" class="img-fluid2 pl-3" src="/res/16_family.png" alt="family" /></div>
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext"><span style="font-style: italic;">&ldquo;I wake up in the morning with such joy now.&rdquo;</span> <br /><br /><span style="font-style: italic;"></span>&ldquo;I find myself singing and dancing around the house with my husband and kids.&rdquo; <br /><br /><span style="font-style: italic;"></span>&ldquo;And my daughter Mary just hugged me and told me how glad she was to see me so happy.&rdquo; <br /><br />Jean told me her husband was overjoyed at her transformation&hellip; <br /><br />And he still found it hard to believe it was as simple for her as taking a few drops of Smile once a day. <br /><br /><span style="font-style: italic;"></span>&ldquo;I thank God for bringing Smile into my life,&rdquo; Jean told me. <span style="font-style: italic;"></span>&ldquo;It truly is the answer to my prayers.&rdquo;</p>
+<div id="img-16-family-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/16_family.png" alt="family" /></div>
+</div>
+</div>
+<div class="row gspace pt-3 pb-5" style="background-color: #23305a;">
+<div class="col-12">
+<p class="gtext text-center" style="color: white;">We&rsquo;ve worked hard to make Smile the best product of its kind on the market&hellip;</p>
+<h1 style="color: white;">To do that, we&rsquo;ve combined the mood-boosting powerhouse <b>kanna</b> with two bonus mood-balancing and stress-busting ingredients in <b>Smile</b>.</h1>
+<img id="img-17-ingred1" class="img-fluid2 mx-auto d-block mt-3 mb-3" src="/res/17_ingred1.png" alt="ingredient1" /> <img id="img-17-ingred2" class="img-fluid2 mx-auto d-block mt-3 mb-3" src="/res/17_ingred2.png" alt="ingredient2" /></div>
+</div>
+<div class="row gspace pt-3">
+<div class="row">
+<div class="col-12">
+<p class="gtext pt-3">With the mood-boosting, mind-balancing powers of <b>kanna</b> and these two bonus nutrients, you&rsquo;ll finally be able to shake that <b>&ldquo;black cloud&rdquo;</b> that shows up from time to time and smothers all that joy and blissfulness in your life…<br /><br />And she&rsquo;s not the only one who&rsquo;s been helped by <span class="bluebold">Smile</span>. <br /><br /><b>Megan E.</b> says that her mother can hardly believe she&rsquo;s the same person.</p>
+</div>
+</div>
+</div>
+<div class="row gspace whitebluegradient mb-0 pt-5">
+<div class="col-12"><img id="img-17-bar" class="img-fluid2 mx-auto d-block" src="/res/bars/17_barr.png" alt="17bar" /></div>
+</div>
+<div class="row gspace bluebg pt-3">
+<div class="row">
+<div class="col-12">
+<p class="gtext pt-3">And <b>Brian L.</b> says Smile is helping him step off the emotional rollercoaster. <br /><br />&ldquo;After taking the Smile formula, I noticed a change in the way I felt when dealing with my day-to-day life,&rdquo; he says. &ldquo;Little things that used to bother me are minimized, and I feel much more at ease.&rdquo; <br /><br />Every time I hear another person rave about how they&rsquo;ve been helped by <span class="bluebold">Smile</span>&hellip; <br /><br />I say a prayer of thanks to God for leading me to this amazing solution. <br /><br />And now it can be your turn.</p>
+</div>
+</div>
+</div>
+<div class="row gspace pt-3">
+<div class="col-12">
+<p class="gtext text-center pt-3">But first, answer this question... and be honest.</p>
+<h1><b style="color: #23305a;">Where do you see yourself in a month?</b></h1>
+</div>
+</div>
+<div class="row gspace align-items-center">
+<div class="col-lg-4 col-md-12"><img id="img-18-questions" class="img-fluid2 pl-3" src="/res/18_questions.png" alt="questions" /></div>
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext"><i class="far fa-question-circle qs" aria-hidden="true"></i> Do you still feel periodic bouts of sadness? <br /><br /><i class="far fa-question-circle qs" aria-hidden="true"></i> Are there times where you're still wanting to stay in bed rather than face the day? <br /><br /><i class="far fa-question-circle qs" aria-hidden="true"></i> Is there still that occassional &ldquo;black cloud&rdquo; casting a shadow over every aspect of your life? <br /><br /><i class="far fa-question-circle qs" aria-hidden="true"></i> Do you still have times where you find it difficult to believe you&rsquo;ll enjoy happiness or peace of mind? <br /><br /><i class="far fa-question-circle qs" aria-hidden="true"></i> Are your friends and family still worrying about your periodic low mood?</p>
+<div id="img-18-questions-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/18_questions.png" alt="questions" /></div>
+</div>
+</div>
+<div class="row gspace pt-3 m-0 whitebluegradient">
+<div class="col-12 boxshadow1">
+<div class="row">
+<div class="col-12 pt-2 boxshadow1" style="background-color: #23305a;">
+<h1 style="color: white;">It doesn't have to be that way.</h1>
+</div>
+<div class="row align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">With the help of <span class="bluebold">Smile</span>, you can break free of the chains of sadness pulling you down&hellip; <br /><br />And chase off that occasional <b>&ldquo;black cloud.&rdquo;</b> <br /><br />You can live a life filled with gladness and wonder&hellip; <br /><br />With a calm, balanced mind to appreciate all its many God-granted joys. <br /><br />Your family and friends will be relieved to see you so happy&hellip;</p>
+</div>
+<div class="col-lg-4 col-md-12"><img class="img-fluid2 pr-3 mx-auto d-block" src="/res/18_happylady.png" alt="happy lady" /></div>
+</div>
+<div class="row">
+<div class="col-12">
+<p class="gtext">While you&rsquo;ll be able to enjoy their company so much more than before. <br /><br />And today, I have some fantastic news for you. <br /><br /><b>Because you have proven how committed you are to supporting the bright mood and balanced mind God wants for you&hellip;</b></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row gspace pt-3 bluebg">
+<div class="col-12">
+<h1><b style="color: #23305a;">The next shipment of bottles of Smile have been reserved for readers of this letter.</b></h1>
+</div>
+<div class="col-lg-8 col-md-12">
+<p class="gtext">
+  But you need to act fast to get yours before we run out of stock. 
+  <br /><br />There&rsquo;s only so much Smile we can produce at one time. 
+  <br /><br />And as word gets out about Smile &hellip; and people across the country are feeling its wondrous benefits for themselves&hellip; 
+  <br /><br />We tend to sell out&hellip; sometimes before we can fully satisfy demand. <br /><br />Which means people who miss out have to wait for us to produce the next batch of Smile.</p>
+</div>
+<div class="col-lg-4 col-md-12">
+  <img class="img-fluid2 pr-3 mx-auto d-block" src="/res/19_oos.png" alt="out of stock" />
+  </div>
+</div>
+<div class="row gspace bluebg align-items-center">
+<div class="col-lg-4 col-md-12"><img id="img-19-ansmile" class="img-fluid2 pl-3" src="/res/19_ansmile.png" alt="logo" /></div>
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext">I&rsquo;m being open with you about this because I really don&rsquo;t want you to miss out&hellip; <br /><br />Which is why we&rsquo;re reserving the next batch for those who order through this letter. <br /><br />As long as you&rsquo;re one of the first people to order today, you&rsquo;ll get your bottle of <b>Smile</b>. <br /><br />And no, we will not charge you automatically every month&hellip; we find that as irritating as you do. In fact, I&rsquo;ve made sure you won&rsquo;t be charged again unless you place another order. <br /><br />But I urge you to be quick&hellip; because I know every one of those bottles will be grabbed up in a flash.</p>
+<div id="img-19-ansmile-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/19_ansmile.png" alt="logo" /></div>
+</div>
+</div>
+<div class="row gspace mt-5" id="buyoptions">
+    <div class="col-md-4 col-sm-12" id="buy1bottledesktop">
+        <img src="res/products/s1n.png" alt="smile1" class="img-fluid2 mx-auto d-block buysec" />
+        <button class="buybutton" type="submit" onclick="redirect('smile1')">
+            <img src="res/global/g_buybutton.png" alt="buybutton" class="buybuttonimage" />
+        </button>
+    </div>
+    <div class="col-md-4 col-sm-12"><img src="res/products/s6n.png" alt="smile6"
+            class="img-fluid2 mx-auto d-block buysec buyshadow" /> <button class="buybutton6" type="submit"
+            onclick="redirect('smile6')"> <img src="res/global/g_buybutton.png" alt="buybutton"
+                class="buybuttonimage" /> </button></div>
+    <div class="col-md-4 col-sm-12"><img src="res/products/s3n.png" alt="smile3"
+            class="img-fluid2 mx-auto d-block buysec" /> <button class="buybutton" type="submit"
+            onclick="redirect('smile3')"> <img src="res/global/g_buybutton.png" alt="buybutton"
+                class="buybuttonimage" /> </button></div>
+    <div class="col-md-4 col-sm-12" id="buy1bottlemobile">
+        <img src="res/products/s1n.png" alt="smile1" class="img-fluid2 mx-auto d-block buysec" />
+        <button class="buybutton" type="submit" onclick="redirect('smile1')">
+            <img src="res/global/g_buybutton.png" alt="buybutton" class="buybuttonimage" />
+        </button>
+    </div>
+</div>
+<div class="row gspace pt-3">
+<div class="row">
+<div class="col-12">
+<p class="gtext pt-3 pl-4 pr-4">We&rsquo;ll get your order of <b>Smile</b> in the mail as soon as you reserve it. <br /><br />It usually takes about 5-7 business days to arrive. <br /><br />When you get that delivery, you&rsquo;ll want to rip the package open so you can try <b>Smile</b> for yourself right away.</p>
+</div>
+</div>
+</div>
+<div class="row gspace pt-3 align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">So do it&hellip; <br /><br />Open the box and take out the bottle of <b>Smile</b>&hellip; <br /><br />Then unscrew the dropper built into the bottle lid&hellip; <br /><br />And squeeze a few drops under your tongue&hellip; <br /><br />You&rsquo;ll barely notice a smell or taste&hellip; maybe a hint of sweetness or citrus&hellip; but nothing more. <br /><br />Hold the drops under your tongue for a few seconds before swallowing. <br /><br />Then do it again every morning. <br /><br />Soon after that first dose, you&rsquo;ll notice a difference.</p>
+</div>
+<div class="col-lg-4 col-md-12"><img class="img-fluid2 pr-3 mx-auto d-block" src="/res/20_ansmile.png" alt="an smile product" /></div>
+</div>
+<div class="row gspace bluebg align-items-center pt-4 pb-3">
+<div class="col-lg-4 col-md-12"><img id="img-21-beachlady" class="img-fluid2 pl-3" src="/res/21_bl.png" alt="beach lady" /></div>
+<div class="col-lg-8 col-md-12 pb-2">
+<p class="gtext">Your mind will feel calmer and clearer. <br /><br />Leaving you free to experience blissful happiness and balanced well-being. <br /><br />Within weeks, friends and family will be telling you how much calmer and happier you look&hellip; <br /><br />And I&rsquo;m sure you&rsquo;ll never want to be without Smile again.</p>
+<div id="img-21-beachlady-mobile"><br /><img class="img-fluid2 mx-auto d-block" src="/res/21_bl.png" alt="beach lady" /></div>
+</div>
+</div>
+<div class="row gspace bluewhitegradient mb-0 pt-5">
+<div class="col-12"><img id="img-21-mbg" class="img-fluid2 mx-auto d-block" src="/res/21_mbg.png" alt="mbg" /></div>
+</div>
+<div class="row gspace pt-3 align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">To put it simply, you risk nothing to put Smile to the test and see if it works for you. <br /><br />Sound good? <br /><br />Because we use only the finest ingredients in <b>Smile</b>&hellip; from the purest sources in the world&hellip; <br /><br />And then we convert those ingredients into potent nano form so that it gets delivered straight to your cells for quick, effective support&hellip; <br /><br />It is not cheap to produce. <br /><br /><b>Normally, Smile sell for $69.99 a bottle.</b> <br /><br />But I have some more great news for you&hellip;</p>
+</div>
+<div class="col-lg-4 col-md-12"><img class="img-fluid2 pr-3 mx-auto d-block" src="/res/21_ansmile.png" alt="an smile product" /></div>
+</div>
+<div class="row gspace pt-3 bluebg">
+<div class="col-12">
+<p class="gtext text-center">If you order today and through this website only...</p>
+<h1><b style="color: #23305a;">You'll take Smile home at a major discount! And the more Smile you order, the more you save..</b></h1>
+<p class="gtext text-center">With the biggest discount reserved for those who <b>order 6 bottles of Smile right now</b>. <br /><br />So place your order for <b>Smile</b> by choosing the 6-bottle option or one of the other options below... <br /><br />And enjoy the peace of mind you&rsquo;ll feel knowing you&rsquo;ll be achieving your best mood and mental balance.</p>
+</div>
+</div>
+<div class="row gspace mt-5" id="buyoptions">
+    <div class="col-md-4 col-sm-12" id="buy1bottledesktop">
+        <img src="res/products/s1n.png" alt="smile1" class="img-fluid2 mx-auto d-block buysec" />
+        <button class="buybutton" type="submit" onclick="redirect('smile1')">
+            <img src="res/global/g_buybutton.png" alt="buybutton" class="buybuttonimage" />
+        </button>
+    </div>
+    <div class="col-md-4 col-sm-12"><img src="res/products/s6n.png" alt="smile6"
+            class="img-fluid2 mx-auto d-block buysec buyshadow" /> <button class="buybutton6" type="submit"
+            onclick="redirect('smile6')"> <img src="res/global/g_buybutton.png" alt="buybutton"
+                class="buybuttonimage" /> </button></div>
+    <div class="col-md-4 col-sm-12"><img src="res/products/s3n.png" alt="smile3"
+            class="img-fluid2 mx-auto d-block buysec" /> <button class="buybutton" type="submit"
+            onclick="redirect('smile3')"> <img src="res/global/g_buybutton.png" alt="buybutton"
+                class="buybuttonimage" /> </button></div>
+    <div class="col-md-4 col-sm-12" id="buy1bottlemobile">
+        <img src="res/products/s1n.png" alt="smile1" class="img-fluid2 mx-auto d-block buysec" />
+        <button class="buybutton" type="submit" onclick="redirect('smile1')">
+            <img src="res/global/g_buybutton.png" alt="buybutton" class="buybuttonimage" />
+        </button>
+    </div>
+</div>
+<div class="row gspace pt-3 pb-0 mb-0 bluebg align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">There&rsquo;s absolutely no risk for trying Smile today&hellip; <br /><br />But there&rsquo;s huge reward waiting for you&hellip; <br /><br />The blessing of a bright, light mood and calm, balanced mind&hellip; <br /><br />I&rsquo;m convinced you&rsquo;ll see amazing results. <br /><br />People like Jean are living proof! <br /><br />But the best results come with long-term use&hellip; <br /><br /><b>When your results go from great to OUTSTANDING.</b></p>
+</div>
+<div class="col-lg-4 col-md-12"><img class="img-fluid2 pr-3 mx-auto d-block" src="/res/22_circles.png" alt="an smile product" /></div>
+</div>
+<div class="row gspace bluebg pt-0 mt-0">
+<div class="col-12">
+<p class="gtext">See, with continued use of Smile, you&rsquo;ll feel so much happier, calmer and more balanced&hellip; <br /><br />And that occasional sadness you&rsquo;ve been feeling will ease&hellip; <br /><br />Your family and friends will be astonished by the brighter, more carefree and relaxed you&hellip; <br /><br />And you&rsquo;ll get to enjoy the relief and happiness that comes from knowing you&rsquo;re no longer a source of worry for them.</p>
+</div>
+</div>
+<div class="row gspace pt-3">
+<div class="col-12">
+<h1><b style="color: #23305a;">What I'm saying is... the longer you use Smile, the better your results will be.</b></h1>
+<p class="gtext">So we&rsquo;ve worked to make it as easy as possible for you to get the full benefit of Smile. <br /><br />When you order today, you&rsquo;ll be able to choose a 1-month, 3-month or 6-month supply.</p>
+</div>
+</div>
+<div class="row gspace pb-0 mb-0 align-items-center">
+<div class="col-lg-8 col-md-12">
+<p class="gtext">You&rsquo;re welcome to select any option, but we&rsquo;ve given you an even <b>bigger discount if you reserve your 6-month supply.</b> <br /><br /><b>That&rsquo;s because I&rsquo;m committed to making sure you get the BEST results possible&hellip; just like Jean did.</b> <br /><br />And I want to make sure you don&rsquo;t run out of Smile and have to wait for more to be released. <br /><br />For these reasons, <b>I recommend you get at least 3 bottles of Smile today&hellip;</b> <br /><br />And if you want to maintain the absolute best, most balanced mood and mental well-being, go ahead and order 6 bottles. <br /><br />We absolutely won&rsquo;t enroll you in an automatic monthly billing program.</p>
+</div>
+<div class="col-lg-4 col-md-12"><img class="img-fluid2 pr-3 mx-auto d-block" src="/res/23_smile.png" alt="an smile product" /></div>
+</div>
+<div class="row gspace mb-0 pt-5">
+<div class="col-12"><img id="img-21-mbg2" class="img-fluid2 mx-auto d-block" src="/res/21_mbg.png" alt="mbg" /></div>
+</div>
+<div class="row gspace pt-3">
+<div class="col-12">
+<p class="gtext"><b>Choose your Smile option now and get started right away!</b> <br /><br />You can gain an incredibly balanced mind and and support coping with the occasional blues everyday life can bring for what one monthly dinner at a mid-priced restaurant would cost you. <br /><br />So I strongly urge you to claim at least one of those available bottles today. <br /><br /><b>Click on the order button of your choice right now.</b></p>
+</div>
+</div>
+<div class="row gspace mt-5" id="buyoptions">
+    <div class="col-md-4 col-sm-12" id="buy1bottledesktop">
+        <img src="res/products/s1n.png" alt="smile1" class="img-fluid2 mx-auto d-block buysec" />
+        <button class="buybutton" type="submit" onclick="redirect('smile1')">
+            <img src="res/global/g_buybutton.png" alt="buybutton" class="buybuttonimage" />
+        </button>
+    </div>
+    <div class="col-md-4 col-sm-12"><img src="res/products/s6n.png" alt="smile6"
+            class="img-fluid2 mx-auto d-block buysec buyshadow" /> <button class="buybutton6" type="submit"
+            onclick="redirect('smile6')"> <img src="res/global/g_buybutton.png" alt="buybutton"
+                class="buybuttonimage" /> </button></div>
+    <div class="col-md-4 col-sm-12"><img src="res/products/s3n.png" alt="smile3"
+            class="img-fluid2 mx-auto d-block buysec" /> <button class="buybutton" type="submit"
+            onclick="redirect('smile3')"> <img src="res/global/g_buybutton.png" alt="buybutton"
+                class="buybuttonimage" /> </button></div>
+    <div class="col-md-4 col-sm-12" id="buy1bottlemobile">
+        <img src="res/products/s1n.png" alt="smile1" class="img-fluid2 mx-auto d-block buysec" />
+        <button class="buybutton" type="submit" onclick="redirect('smile1')">
+            <img src="res/global/g_buybutton.png" alt="buybutton" class="buybuttonimage" />
+        </button>
+    </div>
+</div>
+<div class="row gspace pt-3">
+<div class="col-12">
+<p class="gtext">I can't wait to hear your success story, <br /><br />May God bless you,</p>
+</div>
+</div>
+<div class="row gspace">
+<div class="col-6 ml-5"><img class="img-fluid2 mx-auto d-block" src="/res/sm-23-pastor.JPG" alt="adam" /></div>
+<div class="col-6"></div>
+</div>
+<div class="row gspace graybg mt-5">
+<div class="col-12">
+<p class="referencetext">References:<br /><br />1. https://www.ncbi.nlm.nih.gov/books/NBK361016/ <br />2. http://www.sceletium.org/sceletium-review-article.html <br />3. https://www.sciencedirect.com/science/article/abs/pii/S0031942219301438?casa_token=Q_uFq9u-OMsAAAAA:zNTVJSzN0qywltD_yAcDPzFeZdewO5Sw5Qt99ExqMZ2jLSm473qjCGZW1e1x91teBub7NbDfbKM <br />4. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3828542/ <br />5. https://onlinelibrary.wiley.com/doi/10.1002/hup.2753 <br />6. https://www.hindawi.com/journals/ecam/2014/682014/ <br />7. https://www.sciencedirect.com/science/article/pii/S0378874117331781?casa_token=fJvzT2raCf8AAAAA:JQ4Inz7CvXqilnd_aa1874zG7XzqhVt7_nCTWCpvtAxfIedyH8gWviSDiaw3WE6DdTi0IwSR1a4 <br />8. https://link.springer.com/article/10.1007%2Fs13105-018-0620-6 <br />9. https://www.sciencedirect.com/science/article/pii/S037887411530235X?casa_token=VivZyRn4oKoAAAAA:e-40g1HWhIDhjkbIAksWV6C9gFhZwrSNMT4m0MsEaNHrridnhqbjZM75QTBcPlvi8ppNmfWi41k#bib28 <br />10. https://www.intechopen.com/books/alkaloids-their-importance-in-nature-and-human-life/introductory-chapter-alkaloids-their-importance-in-nature-and-for-human-life <br />11. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5429331/ <br />12. https://journals.sagepub.com/doi/10.1177/0004867418810185?url_ver=Z39.88-2003&amp;rfr_id=ori:rid:crossref.org&amp;rfr_dat=cr_pub%20%200pubmed <br />13.https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5710473/</p>
+</div>
+</div>
+<div class="row gspace mt-5" id="buyoptions">
+    <div class="col-md-4 col-sm-12" id="buy1bottledesktop">
+        <img src="res/products/s1n.png" alt="smile1" class="img-fluid2 mx-auto d-block buysec" />
+        <button class="buybutton" type="submit" onclick="redirect('smile1')">
+            <img src="res/global/g_buybutton.png" alt="buybutton" class="buybuttonimage" />
+        </button>
+    </div>
+    <div class="col-md-4 col-sm-12"><img src="res/products/s6n.png" alt="smile6"
+            class="img-fluid2 mx-auto d-block buysec buyshadow" /> <button class="buybutton6" type="submit"
+            onclick="redirect('smile6')"> <img src="res/global/g_buybutton.png" alt="buybutton"
+                class="buybuttonimage" /> </button></div>
+    <div class="col-md-4 col-sm-12"><img src="res/products/s3n.png" alt="smile3"
+            class="img-fluid2 mx-auto d-block buysec" /> <button class="buybutton" type="submit"
+            onclick="redirect('smile3')"> <img src="res/global/g_buybutton.png" alt="buybutton"
+                class="buybuttonimage" /> </button></div>
+    <div class="col-md-4 col-sm-12" id="buy1bottlemobile">
+        <img src="res/products/s1n.png" alt="smile1" class="img-fluid2 mx-auto d-block buysec" />
+        <button class="buybutton" type="submit" onclick="redirect('smile1')">
+            <img src="res/global/g_buybutton.png" alt="buybutton" class="buybuttonimage" />
+        </button>
+    </div>
+</div>
+<div class="row gspace mt-5">
+<div class="col-12 text-center">For Product Support, please contact the vendor <a href="https://www.anointednutrition.com" target="_blank" rel="noopener">HERE</a>.<br />For Order Support, please contact ClickBank <a href="https://www.clkbank.com/" target="_blank" rel="noopener">HERE</a>.<br /><br />Statements on this website have not been evaluated by the Food and Drug Administration. Products are not intended to diagnose, treat, cure or prevent any disease. If you are pregnant, nursing, taking medication, or have a medical condition, consult your physician before using our products. ClickBank is the retailer of this product. CLICKBANK&reg; is a registered trademark of Click Sales, Inc., a Delaware corporation located at 1444 S. Entertainment Ave., Suite 410 Boise, ID 83709, USA and used by permission. ClickBank&rsquo;s role as retailer does not constitute an endorsement, approval or review of this product or any claim, statement or opinion used in promotion of this product. <br /><br /><a href="https://www.anointednutrition.com/policies/refund-policy" target="_blank" rel="noopener">Refund Policy</a> | <a href="https://www.anointednutrition.com/policies/terms-of-service" target="_blank" rel="noopener">Terms and Conditions</a> | <a href="https://www.anointednutrition.com/policies/terms-of-service" target="_blank" rel="noopener">Privacy Policy</a> | <a href="https://www.anointednutrition.com/pages/contact-us" target="_blank" rel="noopener">Contact Us</a> <br /><br />&copy; 2021 Anointed Nutrition Supplements. All Rights Reserved.</div>
+</div>
+  
+      <!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5NZGMVC"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->
+    
+      <script defer async>
+        document.addEventListener('DOMContentLoaded', function() {
+          const productBySku = {"an-slp-1":{"id":1,"sku":"an-slp-1","name":"Anointed Nutrition Sleep x1","price":"44.97","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SLP-1","files":[]},"an-slp-3":{"id":2,"sku":"an-slp-3","name":"Anointed Nutrition Sleep x3","price":"104.91","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SLP-3","files":[]},"an-slp-6":{"id":3,"sku":"an-slp-6","name":"Anointed Nutrition Sleep x6","price":"149.82","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SLP-6","files":[]},"an-sml-1":{"id":4,"sku":"an-sml-1","name":"Anointed Nutrition Smile x1","price":"69.97","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SML-1","files":[]},"an-sml-2-u":{"id":12,"sku":"an-sml-2-u","name":"Anointed Nutrition Smile x2","price":"69.97","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SML-2-U","files":[]},"an-sml-3":{"id":5,"sku":"an-sml-3","name":"Anointed Nutrition Smile x3","price":"149.91","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SML-3","files":[]},"an-sml-3-u":{"id":10,"sku":"an-sml-3-u","name":"Anointed Nutrition Smile x3","price":"89.91","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SML-3-U","files":[]},"an-sml-6":{"id":6,"sku":"an-sml-6","name":"Anointed Nutrition Smile x6","price":"239.82","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SML-6","files":[]},"an-sml-6-u":{"id":11,"sku":"an-sml-6-u","name":"Anointed Nutrition Smile x6","price":"149.82","currency":"USD","photo":null,"categories":[],"originalSku":"AN-SML-6-U","files":[]},"an-sts-1":{"id":7,"sku":"an-sts-1","name":"Anointed Nutrition Stress x1","price":"44.97","currency":"USD","photo":null,"categories":[],"originalSku":"AN-STS-1","files":[]},"an-sts-3":{"id":8,"sku":"an-sts-3","name":"Anointed Nutrition Stress x3","price":"104.91","currency":"USD","photo":null,"categories":[],"originalSku":"AN-STS-3","files":[]},"an-sts-6":{"id":9,"sku":"an-sts-6","name":"Anointed Nutrition Stress x6","price":"149.82","currency":"USD","photo":null,"categories":[],"originalSku":"AN-STS-6","files":[]}};
+          const pixels = [["776128275846630",["pay.clickbank.net"],false]];
+          for (let el of document.getElementsByTagName('A')) {
+            const href = el.getAttribute('href')
+            if (!href || href === '#') {
+              continue
+            }
+            for (let [ pixel_id, urls, sse ] of pixels) {
+              let sku
+              for (let url of urls) {
+                url = url.replace(/\./g, '\\.')
+                if (!new RegExp("\\b" + url + "\\b", "i").test(href)) {
+                  continue
+                }
+                for (let skuRegex of [
+                  new RegExp(".+\\bcbitems=([^&]+).*"),
+                  new RegExp("https?://(.+?)\\.(.+?)\\." + url + "\\b.+", "i")
+                ]) {
+                  if (!skuRegex.test(href)) {
+                    continue
+                  }
+                  sku = href.replace(skuRegex, '$1')
+                }
+              }
+              if (!sku) {
+                continue
+              }
+              const product = productBySku[sku.toLowerCase()]
+              if (!product) {
+                continue
+              }
+              
+              el.addEventListener('click', function() {
+                if (sse) {
+                  (function(img) {
+                    img.src = '//' + location.hostname
+                      + '/api/facebook/events/AddToCart?'
+                      + '&page_id=6'
+                      + '&pixel_id=' + pixel_id
+                      + '&sku=' + sku
+                      + '&fbp=' + encodeURIComponent(__app.cookies._fbp || '')
+                      + '&fbc=' + encodeURIComponent(__app.cookies._fbc || '')
+                  })(new Image);
+                }
+                else {
+                  fbq('trackSingle', pixel_id, 'AddToCart', {
+                    content_name: product.name,
+                    content_category: product.category,
+                    content_ids: [ product.originalSku ],
+                    content_type: 'product',
+                    value: product.price,
+                    currency: product.currency,
+                  })
+                }
+              }, false)
+            }
+          }
+        })
+      </script>
+    
+        <noscript><img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=776128275846630&ev=PageView&noscript=1"
+        /></noscript>
+      <script src="/js/redirect"></script><script src="/js/popup.js"></script><script defer async>
+      document.addEventListener('DOMContentLoaded', function() {
+
+        const augmentedPaymentLinks = [["ssl.clickbank.net",{"user_id":"__user_id","page_id":"__page_id","page_version":"__page_version","hostname":"__hostname"}],["pay.clickbank.net",{"user_id":"__user_id","page_id":"__page_id","page_version":"__page_version","hostname":"__hostname"}]]
+          .sort(function(a,b) { return b[0].length - a[0].length })
+          .map(function(entry) {
+            return [
+              new RegExp('^https?://(.+\\.)?' + entry[0], 'i'),
+              entry[1],
+              Object.keys(entry[1]).reduce(function(map,key) {
+                map[key] = new RegExp('[?|&]' + entry[1][key] + '=')
+                return map
+              }, {})
+            ]
+          })
+
+        for (let el of document.getElementsByTagName('A')) {
+          const href = el.getAttribute('href')
+          if (!href || href === '#') {
+            continue
+          }
+          for (let entry of augmentedPaymentLinks) {
+            if (!entry[0].test(href)) {
+              continue
+            }
+            const params = []
+            if (entry[1].user_id && !entry[2].user_id.test(href)) {
+              const user_id = __app.cookies.user_id || ''
+              params.push(entry[1].user_id + '=' + encodeURIComponent(user_id))
+            }
+            if (entry[1].page_id && !entry[2].page_id.test(href)) {
+              params.push(entry[1].page_id + '=6')
+            }
+            if (entry[1].page_version && !entry[2].page_version.test(href)) {
+              params.push(entry[1].page_version + '=a')
+            }
+            if (entry[1].hostname && !entry[2].hostname.test(href)) {
+              params.push(entry[1].hostname + '=smile.anointednutrition.com')
+            }
+            if (!params.length) {
+              continue
+            }
+            const glue = href.includes('?')
+              ? '&'
+              : '?'
+            el.setAttribute('href', href + glue + params.join('&'))
+          }
+        }
+      })
+    </script></body></html>
